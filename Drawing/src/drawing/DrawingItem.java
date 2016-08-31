@@ -18,6 +18,26 @@ public abstract class DrawingItem {
 
     private Color color;
 
+    private DrawingItem previousState;
+
+    /**
+     * Get the value of previousState
+     *
+     * @return the value of previousState
+     */
+    public DrawingItem getPreviousState() {
+        return previousState;
+    }
+
+    /**
+     * Set the value of previousState
+     *
+     * @param previousState new value of previousState
+     */
+    public void setPreviousState(DrawingItem previousState) {
+        this.previousState = previousState;
+    }
+
     public DrawingItem(Point anchoir, Color color) {
         this.anchoir = anchoir;
         this.color = color;
@@ -59,4 +79,9 @@ public abstract class DrawingItem {
         this.anchoir = anchoir;
     }
 
+    @Override
+    public String toString() {
+        return "DrawingItem{" + "anchoir=" + anchoir + ", color=" + color + '}';
+    }
+    
 }
