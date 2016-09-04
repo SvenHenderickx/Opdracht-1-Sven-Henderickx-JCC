@@ -72,4 +72,10 @@ public class Spline extends DrawingItem {
         return points;
     }
 
+    @Override
+    public String toString() {
+        return "Spline{" + "points=" + points + ", weight=" + weight + ", degree=" + degree + '}';
+    }
+
+    
 }

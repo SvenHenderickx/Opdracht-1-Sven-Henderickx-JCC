@@ -5,6 +5,7 @@
  */
 package drawing;
 
+import java.awt.Color;
 import java.awt.List;
 import java.awt.Point;
 import java.util.ArrayList;
@@ -18,6 +19,10 @@ public class Polygon extends DrawingItem {
     private Point[] vertices;
 
     private int weight;
+
+    public Polygon(Point anchoir, Color color) {
+        super(anchoir, color);
+    }
 
     /**
      * Get the value of weight
@@ -44,6 +49,11 @@ public class Polygon extends DrawingItem {
      */
     public Point[] getVertices() {
         return vertices;
+    }
+
+    @Override
+    public String toString() {
+        return "Polygon{" + "vertices=" + vertices + ", weight=" + weight + '}';
     }
 
     

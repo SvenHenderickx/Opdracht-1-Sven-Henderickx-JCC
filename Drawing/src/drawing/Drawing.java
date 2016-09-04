@@ -5,6 +5,9 @@
  */
 package drawing;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Sven
@@ -13,9 +16,41 @@ public class Drawing {
     
     private String name;
 
+        private List<DrawingItem> items;
+
+    /**
+     * Get the value of items
+     *
+     * @return the value of items
+     */
+    public List<DrawingItem> getItems() {
+        return items;
+    }
+
+    /**
+     * Set the value of items
+     *
+     * @param items new value of items
+     */
+    public void setItems(List<DrawingItem> items) {
+        this.items = items;
+    }
+    
+    public void addItems(DrawingItem item){
+        this.items.add(item);
+    }
+
+
     private int width;
 
     private int height;
+
+    public Drawing(String name, int width, int height) {
+        this.name = name;
+        this.width = width;
+        this.height = height;
+        items = new ArrayList<>();
+    }
 
     /**
      * Get the value of height

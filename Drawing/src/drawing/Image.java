@@ -61,4 +61,10 @@ public class Image extends DrawingItem {
         this.file = file;
     }
 
+    @Override
+    public String toString() {
+        return "Image{" + "file=" + file + ", size=" + size + '}';
+    }
+
+    
 }

@@ -62,3 +62,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /Drawing/nbproject/private/
+/Drawing/build/

@@ -60,4 +60,8 @@ public class Oval extends DrawingItem {
         this.width = width;
     }
 
+    @Override
+    public String toString() {
+        return "Oval{" + "width=" + width + ", height=" + height + '}';
+    }
 }
