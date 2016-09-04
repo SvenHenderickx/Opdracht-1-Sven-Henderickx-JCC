@@ -12,7 +12,7 @@ import java.awt.Point;
  *
  * @author Sven
  */
-public abstract class DrawingItem {
+public abstract class DrawingItem implements Comparable<DrawingItem> {
     
     private Point anchoir;
 
@@ -79,9 +79,24 @@ public abstract class DrawingItem {
         this.anchoir = anchoir;
     }
 
+    public void backUpDrawingItem(DrawingItem drawingItem){
+        this.previousState = drawingItem;
+    }
+    
     @Override
     public String toString() {
         return "DrawingItem{" + "anchoir=" + anchoir + ", color=" + color + '}';
+    }
+
+    @Override
+    public int compareTo(DrawingItem o) {
+        if(this.anchoir.x > o.anchoir.x && this.anchoir.y > o.anchoir.y){
+            return 1;
+        }
+        else if(this.anchoir.x < o.anchoir.x && this.anchoir.y < o.anchoir.y){
+            return -1;
+        }
+        return 0;
     }
     
 }

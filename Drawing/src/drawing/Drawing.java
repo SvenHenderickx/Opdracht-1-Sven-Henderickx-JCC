@@ -70,5 +70,8 @@ public class Drawing {
     public void setName(String name) {
         this.name = name;
     }
-
+    
+    public void resetToPrevious(DrawingItem drawingItem){
+        drawingItem = drawingItem.getPreviousState();
+    }
 }
