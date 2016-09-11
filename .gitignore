@@ -63,3 +63,6 @@ $RECYCLE.BIN/
 *.lnk
 /Drawing/nbproject/private/
 /Drawing/build/
+/HelloWorld/nbproject/private/
+/HelloWorld/build/
+/HelloWorld/dist/
