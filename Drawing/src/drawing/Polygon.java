@@ -5,10 +5,11 @@
  */
 package drawing;
 
-import java.awt.Color;
 import java.awt.List;
 import java.awt.Point;
 import java.util.ArrayList;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 /**
  *
@@ -20,8 +21,10 @@ public class Polygon extends DrawingItem {
 
     private int weight;
 
-    public Polygon(Point anchoir, Color color) {
+    public Polygon(Point anchoir, Color color, Point[] vertices, int weight) {
         super(anchoir, color);
+        this.vertices = vertices;
+        this.weight = weight;
     }
 
     /**
@@ -56,5 +59,28 @@ public class Polygon extends DrawingItem {
         return "Polygon{" + "vertices=" + vertices + ", weight=" + weight + '}';
     }
 
+    @Override
+    public void Drawing(GraphicsContext gc) {
+        //gc.fillPolygon(getXPoints(), getYPoints(), vertices.length);
+    }
+
+    private double[] getXPoints(){
+        double[] xpoints = null;
+        int count = 0;
+        for(Point p : vertices){
+            xpoints[count] = p.x;
+            count++;
+        }
+        return xpoints;
+    }
     
+    private double[] getYPoints(){
+        double[] ypoints = null;
+        int count = 0;
+        for(Point p : vertices){
+            ypoints[count] = p.y;
+            count++;
+        }
+        return ypoints;
+    }
 }

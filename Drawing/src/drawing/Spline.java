@@ -5,8 +5,9 @@
  */
 package drawing;
 
-import java.awt.Color;
 import java.awt.Point;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 /**
  *
@@ -75,6 +76,11 @@ public class Spline extends DrawingItem {
     @Override
     public String toString() {
         return "Spline{" + "points=" + points + ", weight=" + weight + ", degree=" + degree + '}';
+    }
+
+    @Override
+    public void Drawing(GraphicsContext gc) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

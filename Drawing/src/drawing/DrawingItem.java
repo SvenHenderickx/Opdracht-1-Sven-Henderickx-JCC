@@ -5,8 +5,9 @@
  */
 package drawing;
 
-import java.awt.Color;
 import java.awt.Point;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 /**
  *
@@ -82,6 +83,8 @@ public abstract class DrawingItem implements Comparable<DrawingItem> {
     public void backUpDrawingItem(DrawingItem drawingItem){
         this.previousState = drawingItem;
     }
+    
+    public abstract void Drawing(GraphicsContext gc);
     
     @Override
     public String toString() {

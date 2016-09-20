@@ -5,9 +5,11 @@
  */
 package drawing;
 
-import java.awt.Color;
+
 import java.awt.Font;
 import java.awt.Point;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 /**
  *
@@ -64,6 +66,11 @@ public class PaintedText extends DrawingItem {
     @Override
     public String toString() {
         return "PaintedText{" + "content=" + content + ", font=" + font + '}';
+    }
+
+    @Override
+    public void Drawing(GraphicsContext gc) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

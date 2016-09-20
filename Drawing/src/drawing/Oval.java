@@ -5,8 +5,9 @@
  */
 package drawing;
 
-import java.awt.Color;
 import java.awt.Point;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 /**
  *
@@ -63,5 +64,11 @@ public class Oval extends DrawingItem {
     @Override
     public String toString() {
         return "Oval{" + "width=" + width + ", height=" + height + '}';
+    }
+
+    @Override
+    public void Drawing(GraphicsContext gc) {
+        gc.setFill(this.getColor());
+        gc.fillOval(this.getAnchoir().x, this.getAnchoir().y, this.width, this.height);
     }
 }
