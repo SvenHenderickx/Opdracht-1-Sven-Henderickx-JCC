@@ -61,11 +61,11 @@ public class Polygon extends DrawingItem {
 
     @Override
     public void Drawing(GraphicsContext gc) {
-        //gc.fillPolygon(getXPoints(), getYPoints(), vertices.length);
+        gc.fillPolygon(getXPoints(), getYPoints(), vertices.length);
     }
 
-    private double[] getXPoints(){
-        double[] xpoints = null;
+    public double[] getXPoints(){
+        double[] xpoints = new double[vertices.length];
         int count = 0;
         for(Point p : vertices){
             xpoints[count] = p.x;
@@ -74,8 +74,8 @@ public class Polygon extends DrawingItem {
         return xpoints;
     }
     
-    private double[] getYPoints(){
-        double[] ypoints = null;
+    public double[] getYPoints(){
+        double[] ypoints = new double[vertices.length];
         int count = 0;
         for(Point p : vertices){
             ypoints[count] = p.y;
